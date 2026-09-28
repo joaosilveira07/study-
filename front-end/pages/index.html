@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyLog</title>
+    <title>StudyOS</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="cabecalho">
-        <div id="aba-lateral">
-            <a href="#">Home</a>
-            <a href="#">Stats</a>
-            <a href="#">Sessions</a>
-            <a href="#">Review</a>
-            <a href="#">Goals</a>
-        </div>
-    </header>
     <main>
-        <div class="btn-criar-sessao">
-            <button>
-                Criar nova sessão
-            </button>
+        <div class="esquerda">
+            <div class="secao-esquerda">
+                <h1>Welcome!</h1>
+                <p>
+                    Every student needs a place to get
+                    <br><span>organized</span>,
+                    <br>And this is the right place!
+                </p>
+            </div>
         </div>
+        
+        <div class="direita">
+            <div class="secao-direita">
+                <h2>Sign up!</h2>
+                <form class="form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Email ID" required>
+        
+                    <label for="senha">Password:</label>
+                    <input type="password" id="senha" placeholder="Password" required>
 
-        <div class="">
-
+                    <a href="#">Forget password?</a>
+                    
+                    <button type="submit">Login</button>
+                    
+                    <a href="#">Register</a>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
