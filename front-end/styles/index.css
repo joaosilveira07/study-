@@ -1,9 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 main {
@@ -12,35 +11,58 @@ main {
 
 }
 
-.esquerda{
+.esquerda {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     flex: 1;
-    
-    background-color: #213D59;
-
     width: 50vw;
     min-height: 100vh;
-
-}
-
-.secao-esquerda{
-    background-color: #16293B;
-    border-radius: 8px;
-
-    box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.25);
     
-    padding: 8px;
-    gap: 10px;
-
-    font-size: larger;
-
-    height: 350px;
-    width: 400px;
+    background: linear-gradient(135deg, #0b1329 0%, #172a46 100%);
 }
 
+.secao-esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 50px 60px;
+    box-sizing: border-box;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.message-principal h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.message-principal p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.secao-esquerda p span {
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
 
 .direita{
     display: flex;
@@ -57,23 +79,81 @@ main {
 
 }
 
+.secao-direita{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secao-direita:hover{
+    transform: translateY(-2px);
+}
+
 .form {
     display: flex;
     flex-direction: column;
     
-    height: 350px;
-    width: 400px;
-
+    height: 500px;
+    width: 550px;
+    
     background-color: #213D59;
     color: #ffffff;
-
+    
     border-radius: 8px;
-
+    
     box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.25);
 
     padding: 8px;
 
     gap: 10px;
+
+}
+
+.form label {
+    font-size: 25px;
+}
+
+.form button {
+    font-size: 27px;
+    
+    height: 55px;
+
+    margin-top: 135px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form button:hover{
+    transform: translateY(-3px);
+}
+
+.form a {
+    color: rgba(255, 255, 255, 0.562);
+}
+
+#email {
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+
+    height: 40px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#email:hover{
+    transform: translateY(-2px);
+
+}
+
+#senha{
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+
+    height: 40px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#senha:hover {
+    transform: translateY(-2px);
 
 }
 
