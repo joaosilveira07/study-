@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyOS</title>
     <link rel="stylesheet" href="../styles/index.css">
+    <script src="../js/index.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +35,7 @@
         <div class="direita">
             <div class="secao-direita">
                 <h2>Sign in!</h2>
-                <form class="form">
+                <form class="form" id="formLogin">
                     <div class="form-header">
                         <p>Please enter your details to access your account.</p>
                     </div>
@@ -53,7 +54,7 @@
                     <div class="input">
                         <label for="email">Email:</label>
                         <input type="email" id="email" placeholder="name@example.com" required>
-                        <div id="errorEmail" class="oculto"></div>
+                        <div id="errorEmail" class="hidden"></div>
                     </div>
 
                     <div class="input">
@@ -63,7 +64,7 @@
                         </div>
                         
                         <input type="password" id="senha" placeholder="••••••••" required>
-                        <div id="errorPassword" class="oculto"></div>
+                        <div id="errorPassword" class="hidden"></div>
                     </div>
                     
                     <button type="submit" class="btn-submit">Login</button>
