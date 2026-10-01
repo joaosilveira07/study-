@@ -3,27 +3,22 @@ const form = document.getElementById("formLogin");
 const fieldEmail = document.getElementById("email");
 const fieldPassword = document.getElementById("senha");
 
-const errorEmail = document.getElementById(errorEmail);
-const errorPassword = document.getElementById(errorEmail);
+const errorEmail = document.getElementById("errorEmail");
+const errorPassword = document.getElementById("errorPassword");
 
 const fieldsError = [
-    fieldEmail,
-    fieldPassword,
-];
-
-const textError = [
     errorEmail,
     errorPassword,
 ];
 
 function showError(elementError, message){
-    elementError.classList.add("hidden");
+    elementError.classList.remove("hidden");
     elementError.innerText = message;
 }
 
 function clearErrors(){
     fieldsError.forEach(function (field){
-        field.classList.remove("hidden");
+        field.classList.add("hidden");
     })
 }
 
@@ -37,14 +32,25 @@ form.addEventListener("submit", function (event){
     
     let formValido = true;
 
+    // Validação email
+    if (email === ""){
+        showError(errorEmail, "Email is required.");
+        formValido = false;
+    } else if (email.length > 300){
+        showError(errorEmail, "The Email ")
+    } else if (fieldEmail.validity.typeMismatch){
+        showError(errorEmail, "Enter a valid email address.");
+        formValido = false;
+    }
+
     // Validação senha
     const haveUpper = /[A-Z]/.test(password);
     const haveLower = /[a-z]/.test(password);
     const haveNum = /[0-9]/.test(password);
     const haveSpecial = /[#|@|!|_|*]/.test(password);
 
-    if (password.length < 8){
-        showError(errorPassword, "The password must contain more than 8 characters.");
+    if (password.length <= 8){
+        showError(errorPassword, "The password must be at least 8 characters.");
         formValido = false;
     } else if (!haveUpper){
         showError(errorPassword, "The password must contain at least one uppercase character.");
@@ -60,14 +66,6 @@ form.addEventListener("submit", function (event){
         formValido = false;
     }
 
-    // Validação email
-    if (email === ""){
-        showError(errorEmail, "Email is required.");
-        formValido = false;
-    } else if (fieldEmail.validity.typeMismath){
-        showError(errorEmail, "Enter a valid email address.");
-        formValido = false;
-    }
      
     
 });
