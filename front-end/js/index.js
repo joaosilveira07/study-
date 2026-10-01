@@ -37,7 +37,7 @@ form.addEventListener("submit", function (event){
         showError(errorEmail, "Email is required.");
         formValido = false;
     } else if (email.length > 300){
-        showError(errorEmail, "The Email ")
+        showError(errorEmail, "The Email exceeded the character limit.")
     } else if (fieldEmail.validity.typeMismatch){
         showError(errorEmail, "Enter a valid email address.");
         formValido = false;
