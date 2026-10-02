@@ -20,7 +20,7 @@
 
             <div class="secao-formulario">
                 <h1>Register new account.</h1>
-                <form class="formulario" id="formRegister">
+                <form class="formulario" id="formRegister" novalidate>
                     <div class="form-header">
                         <p>Please, enter with your details.</p>
                     </div>
@@ -35,7 +35,7 @@
 
                     <div class="input">
                         <label for="dateBirth">Date of Birth:</label>
-                        <input type="date" id="dateBirth" placeholder="18">
+                        <input type="date" id="dateBirth">
                         <div class="hidden" id="errorDateBirth"></div>
                     </div>
                     
@@ -51,7 +51,8 @@
                         <div class="hidden" id="errorPassword"></div>
                     </div>
 
-                    <button type="submit" class="btn-submit">Register</button>
+                    <button type="submit" class="btn-submit" id="btn-submit">Register</button>
+                    <div id="success" class="hidden"></div>
 
                 </form>
             </div>
