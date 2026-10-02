@@ -136,3 +136,47 @@ a {
 .btn-submit:active {
     transform: translateY(0);
 }
+
+.hidden {
+    display: none;
+}
+
+#errorName {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 12px 16px; 
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#errorDateBirth {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 12px 16px; 
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#errorEmail {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 12px 16px; 
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#errorPassword {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 12px 16px; 
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 8px;
+}
