@@ -177,6 +177,10 @@ main {
     align-items: center;
 }
 
+.label-wrapper a {
+    padding: 4px;
+}
+
 .input-group label {
     font-size: 0.875rem;
     font-weight: 600;
@@ -255,6 +259,30 @@ main {
     text-decoration: underline;
 }
 
+a {
+    text-decoration: none;
+}
+
 .hidden {
     display: none;
+}
+
+#errorEmail {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5; 
+    color: #991b1b;
+    padding: 12px 16px; 
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#errorPassword {
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+    padding: 12px 16px; 
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 8px;
 }
