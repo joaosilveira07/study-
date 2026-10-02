@@ -137,6 +137,10 @@ a {
     transform: translateY(0);
 }
 
+.btn-submit:disabled {
+    cursor: not-allowed;
+}
+
 .hidden {
     display: none;
 }
@@ -178,5 +182,20 @@ a {
     padding: 12px 16px; 
     border-radius: 6px;
     font-size: 14px;
+    margin-top: 8px;
+}
+
+#success {
+    background-color: #7EC98E;
+
+    padding: 12px 16px;
+    
+    border: 1px solid #3FA34D;
+    border-radius: 6px;
+
+    color: #032615;
+
+    font-size: 14px;
+
     margin-top: 8px;
 }
