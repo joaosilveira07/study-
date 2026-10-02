@@ -10,6 +10,9 @@ const errorDateBirth = document.getElementById("errorDateBirth");
 const errorEmail = document.getElementById("errorEmail");
 const errorPassword = document.getElementById("errorPassword");
 
+const btn = document.getElementById("btn-submit");
+const fieldSuccess = document.getElementById("success");
+
 const fieldsError = [
     errorName,
     errorDateBirth,
@@ -27,6 +30,24 @@ function clearErrors(){
         field.classList.add("hidden");
         field.innerText = "";
     })
+}
+
+function calculateAge(dateBirth){
+    const today = new Date();
+    const birth = new Date(`${dateBirth}T00:00:00`);
+
+    let age = today.getFullYear() - birth.getFullYear();
+    const birthdayNotYet = today.getMonth() < birth.getMonth() || today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate();
+
+    if (birthdayNotYet) {
+        age--;
+    }
+
+    return age;
+}
+
+function redirect(){
+    window.location.href = "index.html";
 }
 
 form.addEventListener("submit", function (event){
@@ -61,12 +82,18 @@ form.addEventListener("submit", function (event){
     } else {
         const dateBirthObject = new Date(dateBirth);
 
-        if (dateBirthObject.getFullYear() > today.getFullYear()) {
-            showError(errorDateBirth, "The year of birth cannot be greater than the current year.");
+        if (dateBirthObject > today){
+            showError(errorDateBirth, "The date of birth cannot be a future date.");
             formValido = false;
-        } 
+        }
+
         if (dateBirthObject.getFullYear() < 1900){
             showError(errorDateBirth, "Enter a valid year of birth.");
+            formValido = false;
+        }
+        
+        if (calculateAge(dateBirth) < 2){
+            showError(errorDateBirth, "You are not old enough to use this.");
             formValido = false;
         }
     }
@@ -89,7 +116,7 @@ form.addEventListener("submit", function (event){
     const haveNum = /[0-9]/.test(password);
     const haveSpecial = /[#|@!_*]/.test(password);
 
-    if (password.length <= 8){
+    if (password.length < 8){
         showError(errorPassword, "The password must be at least 8 characters.");
         formValido = false;
     } else if (!haveUpper){
@@ -106,5 +133,11 @@ form.addEventListener("submit", function (event){
         formValido = false;
     }
 
-    
+    if (formValido) {
+        clearErrors();
+        fieldSuccess.classList.remove("hidden");
+        fieldSuccess.innerText = "Registration successful!";
+        btn.disabled = true;
+        setTimeout(redirect, 1250);
+    }
 });
