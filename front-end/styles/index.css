@@ -64,28 +64,16 @@ main {
     font-weight: 700;
 }
 
-.direita{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-
-    background-color: #E9E6E7;
-    color: #070D13;
-
-    width: 50vw;
-    min-height: 100vh;
-
-}
 
 .direita {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
+
     width: 50vw;
     min-height: 100vh;
+
     background-color: #f8fafc;
     color: #0f172a;
 }
@@ -165,12 +153,6 @@ main {
     letter-spacing: 0.5px;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
 .label-wrapper {
     display: flex;
     justify-content: space-between;
@@ -179,12 +161,6 @@ main {
 
 .label-wrapper a {
     padding: 4px;
-}
-
-.input-group label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #334155;
 }
 
 .link-forgot {
@@ -261,6 +237,10 @@ main {
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .hidden {
