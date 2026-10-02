@@ -50,7 +50,7 @@ form.addEventListener("submit", function (event){
     const haveNum = /[0-9]/.test(password);
     const haveSpecial = /[#|@|!|_|*]/.test(password);
 
-    if (password.length <= 8){
+    if (password.length < 8){
         showError(errorPassword, "The password must be at least 8 characters.");
         formValido = false;
     } else if (!haveUpper){
