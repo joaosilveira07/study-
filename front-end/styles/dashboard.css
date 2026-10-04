@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: linear-gradient(135deg, #0b1329 0%, #172a46 100%);
+}
+
+.logo {
+    margin-left: 12px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+
+    gap: 8px;
+    
+    margin-right: 12px;
+}
