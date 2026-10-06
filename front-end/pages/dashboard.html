@@ -27,75 +27,135 @@
     <main class="main">
 
         <div class="greeting">
-            <h1>Hello, Magnata!</h1>
+            <h1>Hello, User!</h1>
             <span><p>Ready to make more progress today?</p></span>
+                
+            <button class="btn-session" type="button" id="new-session-btn">
+                <span class="btn-plus"></span>
+                New Session
+            </button>
         </div>
 
         <div class="cards">
             <div class="section">
                 <div class="objective">
-                    <h2>Seu Objetivo</h2>
-                    <p>Desenvolvedor Back-End Java</p>
+                    <h2 class="card-title"><span class="icon">🎯</span>Your Objective</h2>
+                    <p class="highlight">Development Back-End Java</p>
+                    
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Object-Oriented Programming</span>
+                    </div>
+                    <p class="muted">Weekly Goal: 10h of study</p>
                 </div>
             </div>
-    
+
             <div class="section">
                 <div class="roadmap">
-                    <h2>Roadmap</h2>
-                    <svg class="pizza" width="80" height="80" viewBox="0, 0, 100, 100">
-                        <circle cx="50" cy="50" r="25" fill="none" stroke="#34d399" stroke-width="50" stroke-dasharray="47, 157">
-                        </circle>
+                    <h2 class="card-title"><span class="icon">🗺️</span>Roadmap</h2>
+                    <svg class="pizza" width="180" height="180" viewBox="0, 0, 100, 100">
 
-                        <circle cx="50" cy="50" r="25" fill="none" stroke="#f5b94a" stroke-width="50" stroke-dasharray="47, 157">
-                        </circle>
+                        <g class="slice">
+                            <circle cx="50" cy="50" r="25" fill="none" stroke="#34d399" stroke-width="50" stroke-dasharray="47, 157" transform="rotate(-90 50 50)"></circle>
+                            <g class="tooltip">
+                                <rect x="108" y="21" width="70" height="22" rx="3"></rect>
+                                <text class="slice-text" x="114" y="30">
+                                    <tspan x="114">30% of Roadmap</tspan>
+                                    <tspan x="114" dy="9">completed</tspan>
+                                </text>
+                            </g>
+                        </g>
 
-                        <circle cx="50" cy="50" r="25" fill="none" stroke="#24385c" stroke-width="50" stroke-dasharray="47, 157">
-                        </circle>
+                        <g class="slice">
+                            <circle cx="50" cy="50" r="25" fill="none" stroke="#f5b94a" stroke-width="50" stroke-dasharray="31, 157" stroke-dashoffset="-47" transform="rotate(-90 50 50)"></circle>
+                            <g class="tooltip">
+                                <rect x="108" y="63" width="70" height="22" rx="3"></rect>
+                                <text class="slice-text" x="114" y="72">
+                                    <tspan x="114">20% of Roadmap</tspan>
+                                    <tspan x="114" dy="9">in progress</tspan>
+                                </text>
+                            </g>
+                        </g>
+
+                        <g class="slice">
+                            <circle cx="50" cy="50" r="25" fill="none" stroke="#24385c" stroke-width="50" stroke-dasharray="79, 157" stroke-dashoffset="-78" transform="rotate(-90 50 50)"></circle>
+                            <g class="tooltip">
+                                <rect x="108" y="39" width="70" height="22" rx="3"></rect>
+                                <text class="slice-text" x="114" y="48">
+                                    <tspan x="114">50% of Roadmap</tspan>
+                                    <tspan x="114" dy="9">not completed</tspan>
+                                </text>
+                            </g>
+                        </g>
+
                     </svg>
+                    <div class="tags">
+                        <p class="tag">Current module: Java Collections</p>
+                    </div>
                 </div>
             </div>
-    
+
             <div class="section">
                 <div class="revisions">
-                    <h2>Revisão de hoje</h2>
-                    <p>Interfaces em Java</p>
+                    <h2 class="card-title"><span class="icon">🔁</span>Today's Review</h2>
+                    <ul class="review-list">
+                        <li>Java Interfaces</li>
+                        <li>Inheritance and Polymorphism</li>
+                        <li>Exception Handling</li>
+                    </ul>
                 </div>
             </div>
-    
+
             <div class="section">
                 <div class="studying-now">
-                    <h2>Estudando agora</h2>
-                    <h4>Java Collections</h4>
-                    <table>
-                        <tr>
-                            <th>Teoria</th>
-                            <th>Prática</th>
-                        </tr>
-                        <tr>
-                            <td>1 hora</td>
-                            <td>2 horas</td>
-                        </tr>
-                    </table>
+                    <h2 class="card-title"><span class="icon">📚</span>Studying Now</h2>
+                    <p class="highlight">Java Collections</p>
+                    <p class="muted">Topic 3 de 8 of module</p>
+                    
+                    <div class="progress"><div class="progress-fill"></div></div>
+                        <div class="chips">
+                            <span class="chip">Theory · 1 hour</span>
+                            <span class="chip">Practice · 2 hours</span>
+                        </div>
                 </div>
             </div>
+                
+            <div class="section">
+                
+                <div class="week">
+                    <h2 class="card-title"><span class="icon">⚡</span>This Week</h2>
+                    
+                    <div class="stats">
+                        <div class="stat green"><strong>8h40</strong><span>studied</span></div>
+                        <div class="stat amber"><strong>6</strong><span>sessions</span></div>
+                        <div class="stat blue"><strong>3</strong><span>completed topics</span></div>
+                    
+                    </div>
+                
+                </div>
     
+            </div>
+
         </div>
 
-        <div class="section">
+        <div class="section section-wide">
                 <div class="consistency">
-                    <h2>Consistência</h2>
-                    <!--Gráfico igual do github-->
+                    <h2 class="card-title"><span class="icon">🔥</span>Consistency</h2>
+
+                    <div class="heatmap" id="heatmap"></div>
+
+                    <div class="legend">
+                        <span>Less</span>
+                        <span class="cell level-0"></span>
+                        <span class="cell level-1"></span>
+                        <span class="cell level-2"></span>
+                        <span class="cell level-3"></span>
+                        <span class="cell level-4"></span>
+                        <span>More</span>
+                    </div>
                 </div>
             </div>
     
-            <div class="section">
-                <div class="week">
-                    <h2>Esta semana</h2>
-                    <p>8h 40 minutos estudadas</p>
-                    <p>6 sessões de estudo</p>
-                    <p>3 tópicos concluídos</p>
-                </div>
-            </div>
 
     </main>
 
